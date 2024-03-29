@@ -1,5 +1,8 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index" }
+  ],
+  "redirects": [
+    { "source": "/api2", "destination": "/api/index", "statusCode": 301 }
   ]
 }
