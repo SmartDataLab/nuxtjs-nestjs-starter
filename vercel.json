@@ -1,8 +1,15 @@
 {
   "builds": [
     {
-        "src": "api/nest/main.ts",
-        "use": "@vercel/node"
+      "src": "dist/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/nest/main.js",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
     }
   ],
   "rewrites": [{ "source": "/express/(.*)", "destination": "/api/express" },
