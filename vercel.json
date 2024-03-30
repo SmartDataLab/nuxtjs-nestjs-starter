@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "dist/main.js",
+      "src": "api/nest/main.js",
       "use": "@vercel/node"
     }
   ],
@@ -11,11 +11,5 @@
       "dest": "api/nest/main.js",
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
     }
-  ],
-  "rewrites": [{ "source": "/express/(.*)", "destination": "/api/express" },
-  { "source": "/nest/(.*)", "destination": "/api/nest/main.ts" },
-  { "source": "/api/(.*)", "destination": "/api/index" }],
-  "redirects": [
-    { "source": "/api2", "destination": "/api/index", "statusCode": 301 }
   ]
 }
