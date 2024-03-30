@@ -1,5 +1,12 @@
 {
+  "builds": [
+    {
+        "src": "api/nest/main.ts",
+        "use": "@vercel/node"
+    }
+  ],
   "rewrites": [{ "source": "/express/(.*)", "destination": "/api/express" },
+  { "source": "/nest/(.*)", "destination": "/api/nest/main.ts" },
   { "source": "/api/(.*)", "destination": "/api/index" }],
   "redirects": [
     { "source": "/api2", "destination": "/api/index", "statusCode": 301 }
