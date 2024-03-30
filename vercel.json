@@ -1,5 +1,5 @@
 {
-  "rewrites": [{ "source": "/express/(.*)", "destination": "/api/express.js" },
+  "rewrites": [{ "source": "/express/(.*)", "destination": "/api/express" },
   { "source": "/api/(.*)", "destination": "/api/index" }],
   "redirects": [
     { "source": "/api2", "destination": "/api/index", "statusCode": 301 }
