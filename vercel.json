@@ -1,14 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "api/nest/main.js",
-      "use": "@vercel/node"
-    }
-  ],
+  "version": 2,
+  "buildCommand":"nuxt build",
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "api/nest/main.js",
+      "src": "/api/(.*)",
+      "dest": "api/main.ts",
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
     }
   ]

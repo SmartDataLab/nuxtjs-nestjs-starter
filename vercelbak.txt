@@ -5,3 +5,32 @@
   "redirects": [
     { "source": "/api2", "destination": "/api/index", "statusCode": 301 }
   ]
+
+    "builds": [
+    {
+      "src": "api/nest/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+    "functions": {
+    "api/nest/main.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+
+  ,
+    {
+      "src": "src/main.ts",
+      "use": "@vercel/node"
+    }
+
+      "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": ["server-middleware/**"]
+      }
+    }
+  ],

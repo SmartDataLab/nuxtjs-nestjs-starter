@@ -1,29 +1,9 @@
 {
-  "monorepo": true,
-  "root": "apps/nest/nextjs-fastapi",
-  "sourceRoot": "apps/nest/nextjs-fastapi/src",
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "api",
   "compilerOptions": {
-    "webpack": true,
-    "tsConfigPath": "apps/nest/nextjs-fastapi/tsconfig.app.json"
-  },
-  "projects": {
-    "nextjs-fastapi": {
-      "type": "application",
-      "root": "apps/nest/nextjs-fastapi",
-      "entryFile": "main",
-      "sourceRoot": "apps/nest/nextjs-fastapi/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/nest/nextjs-fastapi/tsconfig.app.json"
-      }
-    },
-    "nest": {
-      "type": "application",
-      "root": "apps/nest/nest",
-      "entryFile": "main",
-      "sourceRoot": "apps/nest/nest/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/nest/nest/tsconfig.app.json"
-      }
-    }
+    "deleteOutDir": true,
+    "exclude":["nuxt.config.ts"]
   }
 }
