@@ -9,7 +9,7 @@
 # @app.route('/func/about')
 # def about():
 #     return 'About'
-
+# 通过unicorn启动时传一个参数是否套一层/api路由
 from fastapi import FastAPI
 
 app = FastAPI()
