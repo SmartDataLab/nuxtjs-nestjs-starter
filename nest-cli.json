@@ -3,7 +3,6 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "api",
   "compilerOptions": {
-    "deleteOutDir": true,
-    "exclude":["nuxt.config.ts"]
+    "deleteOutDir": true
   }
 }
