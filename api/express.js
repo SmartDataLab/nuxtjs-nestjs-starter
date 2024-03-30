@@ -3,7 +3,7 @@ const app = express();
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
-app.get("/express/", (req, res) => res.send("/Express/ on Vercel"));
+app.get("/express/hello", (req, res) => res.send("/Express/ on Vercel"));
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
